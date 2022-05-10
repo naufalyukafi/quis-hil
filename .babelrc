@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "@babel/preset-env", //for read js modern
+        "@babel/preset-react", //for read jsx
+        "@babel/preset-typescript" //for read typescript
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime", //allow async and await js
+            {
+                "regenerator": true
+            }
+        ]
+    ]
+}
