@@ -24,6 +24,17 @@ const config: Configuration = {
                     loader: "babel-loader"  // if find => babel-loader plugin handle these files. that can Loads ES2015+ code and transpiles to ES5 using Babel
                 },
             },
+            //style loader will take this string and will embed it in the style tag in index.html
+            //css-loader will take all the CSS from the CSS file and generate it to a single string
+            {
+                test: /\.(s(a|c)ss)$/,
+                use: ["style-loader", "css-loader", "sass-loader"]
+            },
+            //url-loader to inline a file into the bundle as a data URI
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
+            },
         ],
     },
     resolve: {
