@@ -4,6 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 import ESLintPlugin from "eslint-webpack-plugin"
 import { CleanWebpackPlugin } from "clean-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 
 const config: Configuration = {
     mode: "production", // environment (development or production) 
@@ -38,6 +39,11 @@ const config: Configuration = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
+        preferRelative: true,
+        alias: {
+            "@/*": path.resolve(__dirname, "src/**"),
+        },
+        plugins: [new TsconfigPathsPlugin({})]
     },
     plugins: [
         new HtmlWebpackPlugin({

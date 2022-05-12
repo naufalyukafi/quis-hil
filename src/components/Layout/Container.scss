@@ -1,0 +1,16 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+}
+
+@media screen and (min-width: 650px) {
+    .children {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        margin: auto;
+    }
+}

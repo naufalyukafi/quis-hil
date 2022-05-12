@@ -1,0 +1,10 @@
+$colorPrimary: hsl(110, 44%, 47%);
+$colorSecondary: #fff;
+$colorBlack: #000;
+
+.container__card {
+    background-color: $colorPrimary;
+    padding: 20px;
+    min-width: 200px;
+    border-radius: 10px;
+}

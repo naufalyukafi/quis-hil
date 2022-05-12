@@ -1,0 +1,35 @@
+$colorDefault: #7e7e7e;
+$colorPrimary: hsl(110, 44%, 47%);
+$colorSecondary: #fff;
+$colorBlack: #000;
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    color: $colorSecondary;
+    border-width: 0;
+    margin-top: 10px;
+    outline: none;
+    min-width: 180px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &-default {
+        background-color: $colorDefault;
+        color: $colorBlack;
+    }
+
+    &-primary {
+        background-color: $colorPrimary;
+
+
+    }
+
+    &-secondary {
+        background-color: $colorSecondary;
+        color: $colorBlack;
+    }
+}

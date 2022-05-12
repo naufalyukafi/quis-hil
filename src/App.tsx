@@ -1,17 +1,17 @@
 import React from 'react'
-import "./App.scss"
-import { background, profile } from './images'
- 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { About, Home, ListQuiz } from '@/pages'
+
 const App = () => {
-    return (
-    <div className="container" 
-      style={{
-        backgroundImage: `url('${background}')`,
-      }}>
-      <h1 style={{fontSize: 100}}>Hello World!</h1>
-      <img src={profile} alt="image" style={{objectFit: 'cover'}} />
-    </div>
-  )
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/kuis' element={<ListQuiz />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  )    
 }
 
 export default App

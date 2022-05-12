@@ -1,0 +1,25 @@
+.container__home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+
+    .home__image {
+        object-fit: 'cover';
+        margin-top: 50px;
+        max-height: 200px;
+    }
+
+    .home__button {
+        margin-top: 10px
+    }
+}
+
+
+@media screen and (min-width: 650px) {
+    .home__image {
+        margin-top: 0;
+        min-height: 300px;
+    }
+}

@@ -3,6 +3,7 @@ import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 
 interface Configuration extends WebpackConfiguration {
     devServer?: WebpackDevServerConfiguration;
@@ -39,6 +40,11 @@ const config: Configuration = {
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
+        preferRelative: true,
+        alias: {
+            "@/*": path.resolve(__dirname, "src/**"),
+        },
+        plugins: [new TsconfigPathsPlugin({})]
     },
     plugins: [
         new HtmlWebpackPlugin({
